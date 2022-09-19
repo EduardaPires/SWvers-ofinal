@@ -1,0 +1,9 @@
+
+<button onclick="connectSerial()">Conectar com máquina</button>
+<p type="text" id="baud" list="baudList" style="width: 10ch;" value="9600"
+    onchange="localStorage.baud = this.value"></p>
+
+<button class="paciente1" value="1" id="lineToSend" onclick="sendSerialLine()">Preparar</button>
+<br>
+
+<script src="script.js"></script>

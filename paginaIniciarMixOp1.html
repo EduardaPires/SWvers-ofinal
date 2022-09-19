@@ -177,18 +177,32 @@ padding: 5px;
 }
 .btnPreparar{
     margin-left: 320px;
-    margin-top: 200px;
+    margin-top: 50px;
     padding: 15px;
     border-radius: 5px;
     background-color:#CE444D;
     color: white;
     border: none;
     font-size: 20px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
   .btnPreparar:hover{
     background-color: #C13038;
+  }
+
+  .conectarMaquina{
+    padding: 13px;
+    background-color: #426f99;
+    color: white;
+    border:none;
+    margin-top: 190px;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-left: 320px;
+  }
+  .conectarMaquina:hover{
+    background-color: #51799f;
   }
   
   .img_Logout:hover{
@@ -197,6 +211,9 @@ padding: 5px;
     padding-bottom: 3px;
     padding-left: 2px;
   }
+  .buscar:hover{
+    background-color: #7FA4C7;
+}
 
 @media only screen and (min-width: 600px) {
   /* For tablets: */
@@ -239,9 +256,9 @@ padding: 5px;
 <div class="header">
         <img src="./imagens/logoProjeto.png" class="img_logoProjeto" >
     <div class="header-right">
-        <a class="active" href="/paginaIniciarMix.html">INICIAR MIX</a>
-        <a href="/paginaMedicamentos.html">MEDICAMENTOS</a>
-        <a href="/paginaPacientes.html">PACIENTES</a>
+        <a class="active" href="paginaIniciarMix.html">INICIAR MIX</a>
+        <a href="paginaMedicamentos.html">MEDICAMENTOS</a>
+        <a href="paginaPacientes.html">PACIENTES</a>
         <a href="#crm">CRM 123456 <br> Dr. João Ramos</a>
         <img src="./imagens/imgLogout.png" class="img_Logout" >
     </div>
@@ -257,12 +274,12 @@ padding: 5px;
             </div>
      <div class= listademed>
         <ul>
-          <a href="/paginaIniciarMixOp1.html"><li>Maria José de Anchieta</li></a>
-          <a href="/paginaIniciarMixOp2.html"><li>Maria Luiza Campos Lima</li></a>
-          <a href="/paginaIniciarMixOp3.html"><li>José Mario da Silva</li></a>
-          <a href="/paginaIniciarMixOp4.html"><li>João Roberto Machado</li></a>
-          <a href="/paginaIniciarMixOp5.html"><li>Aparecida dos Santos</li></a>
-          <a href="/paginaIniciarMixOp6.html"><li>Silvio Fernandes Lima</li></a>
+          <a href="paginaIniciarMixOp1.html"><li>Maria José de Anchieta</li></a>
+          <a href="paginaIniciarMixOp2.html"><li>Maria Luiza Campos Lima</li></a>
+          <a href="paginaIniciarMixOp3.html"><li>José Mario da Silva</li></a>
+          <a href="paginaIniciarMixOp4.html"><li>João Roberto Machado</li></a>
+          <a href="paginaIniciarMixOp5.html"><li>Aparecida dos Santos</li></a>
+          <a href="paginaIniciarMixOp6.html"><li>Silvio Fernandes Lima</li></a>
         </ul>
      </div>
   </div>
@@ -274,17 +291,23 @@ padding: 5px;
   <div class="col-3 col-s-12">
     <div class="aside">
       <div class="remedio">
-        <h2>Dipirona 25 mg <button class="estoque"> </button></h2>
+        <h2>Metformina 500 mg<button class="estoque"> </button></h2>
       </div>
     </div>
-    <button class="btnPreparar" type="submit" onclick="alert('mensagem')">
+   <!--<button class="btnPreparar" type="submit" onclick="alert('mensagem')">
         PREPARAR
-    </button>
+    </button>--> 
+    <button class="conectarMaquina" onclick="connectSerial()">Conectar com máquina</button>
+<p type="text" id="baud" list="baudList" style="width: 10ch;" value="9600"
+    onchange="localStorage.baud = this.value"></p>
+
+    <button class="btnPreparar" value="1" id="lineToSend" onclick="sendSerialLine()">PREPARAR</button>
   </div>
 </div>
 
-
+<script src="script.js"></script>
 </body>
+
 </html>
 
 
