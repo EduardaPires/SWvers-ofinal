@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="=pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página de Iniciar Mix Op1</title>
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0%;
+  padding: 0%;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+[class*="col-"] {
+  float: left;
+}
+
+html {
+  font-family: "Lucida Sans", sans-serif;
+}
+
+
+/* Style the header with a grey background and some padding */
+.header {
+    overflow: hidden;
+    background-color: #2D5982;
+    padding: 20px 10px;
+    padding-left: 60px;
+  }
+  
+  /* Style the header links */
+  .header a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+  }
+  
+  /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+  .header a.logo {
+    font-size: 25px;
+    font-weight: bold;
+  }
+  
+  /* Change the background color on mouse-over */
+  .header a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Style the active/current link*/
+  .header a.active {
+    background-color: #42719D;
+    color: white;
+  }
+  
+  /* Float the link section to the right */
+  .header-right {
+    float: right;
+  }
+
+  
+  /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+  @media screen and (max-width: 500px) {
+    .header a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    .header-right {
+      float: none;
+    }
+  }
+
+  .img_Logout{
+    width: 50px;
+    padding-left: 5px;
+    padding-top: 10px;
+  }
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  padding: 12px;
+  margin-bottom: 7px;
+  background-color: #33b5e5;
+  color: black;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  font-size: 20px;
+   text-align: left;
+   padding-left: 13px;
+}
+
+.menu li:hover {
+  background-color: #0099cc;
+}
+
+.listademed {
+  background-color: #BEE0FF;
+  padding: 5px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 14px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  padding-bottom: 100%;
+}
+
+.listademed a{
+  text-decoration: none;
+}
+
+.busca{
+ background-color: #d5d4d4;
+ padding: 8px;
+ box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+ 
+}
+#pesquisa{
+font-size:20px;
+width: 360px;
+border: none;
+padding: 5px;
+
+}
+.buscar{
+ background-color: #ADCCE9;
+ padding: 7px;
+ text-decoration: none;
+ color: black;
+ 
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+
+.col-6{
+  padding-top: 200px;
+  margin-left: 100px;
+  padding-top: 60px;
+}
+.aside{
+  padding-left: 100px;
+}
+
+.remedio{
+  margin-top: 25px;
+  background-color: #8FCAF9;
+  justify-content: space-between;
+  padding: 7px;
+  border-radius: 3px;
+}
+
+.estoque{
+  background-color: rgb(96, 185, 96);
+  position: static;
+  width: 50px;
+  height: 20px;
+  border:none;
+  margin-top: 8px;
+  margin-left: 90px;
+}
+.btnPreparar{
+    margin-left: 320px;
+    margin-top: 200px;
+    padding: 15px;
+    border-radius: 5px;
+    background-color:#CE444D;
+    color: white;
+    border: none;
+    font-size: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .btnPreparar:hover{
+    background-color: #C13038;
+  }
+
+  .conectarMaquina{
+    padding: 6px;
+    background-color: #426f99;
+    color: white;
+    border:none;
+    font-size: 16px;
+    border-radius: 5px;
+    align-items: left;
+  }
+  .conectarMaquina:hover{
+    background-color: #51799f;
+  }
+  
+  .img_Logout:hover{
+    background-color: #7BA7CF;
+    border-radius: 5px;
+    padding-bottom: 3px;
+    padding-left: 2px;
+  }
+  .buscar:hover{
+    background-color: #7FA4C7;
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+  .pesquisarPacientes{width: 5%;}
+  .remedio{width:90%}
+
+}
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 38%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+  .pesquisarPacientes{width: 5%;}
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+ <img src="./imagens/logoProjeto.png" class="img_logoProjeto">
+    <div class="header-right">
+        <a class="active" href="paginaIniciarMix.html">INICIAR MIX</a>
+        <a href="paginaMedicamentos.html">MEDICAMENTOS</a>
+        <a href="paginaPacientes.html">PACIENTES</a>
+        <a href="#crm">CRM 123456 <br> Dr. João Ramos</a>
+        <a href="/telaLogin.html"><img src="./imagens/imgLogout.png" class="img_Logout" ></a> 
+    </div>
+
+    
+  </div>
+
+<div class="row">
+  <div class="col-3 col-s-3 menu">
+            <div class="busca">
+                <input type="text" placeholder="Pesquisar pacientes" id="pesquisa" class="pesquisarPacientes">
+                <!--<a href="#" class="buscar" onclick="pesquisar()"> BUSCAR </a>-->
+                <button class="conectarMaquina" onclick="connectSerial()">BUSCAR</button>
+<p type="text" id="baud" list="baudList" style="width: 10ch;" value="9600"
+    onchange="localStorage.baud = this.value"></p>  
+            </div>
+     <div class= listademed>
+        <ul>
+          <a href="paginaIniciarMixOp1.html"><li>Maria José de Anchieta</li></a>
+          <a href="paginaIniciarMixOp2.html"><li>Maria Luiza Campos Lima</li></a>
+          <!--<a href="paginaIniciarMixOp3.html"><li>José Mario da Silva</li></a>-->
+          <a href="paginaIniciarMixOp4.html"><li>João Roberto Machado</li></a>
+          <!--<a href="paginaIniciarMixOp5.html"><li>Aparecida dos Santos</li></a>
+          <a href="paginaIniciarMixOp6.html"><li>Silvio Fernandes Lima</li></a>-->
+        </ul>
+     </div>
+  </div>
+
+  <div class="col-6 col-s-9">
+    <h1>PACIENTE: MARIA LUIZA CAMPOS </h1>
+  </div>
+
+  <div class="col-3 col-s-12">
+    <div class="aside">
+      <div class="remedio">
+        <h2>Losartana 2 mg <button class="estoque"> </button></h2>
+      </div>
+    </div>
+    <!--<button class="btnPreparar" type="submit" onclick="alert('mensagem')">
+        PREPARAR
+    </button>-->
+    <button class="btnPreparar" value="3" id="lineToSend" onclick="sendSerialLine()">PREPARAR</button>
+  </div>
+</div>
+
+
+</body>
+<script src="script.js"></script>
+</html>
+
+
