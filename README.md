@@ -1,2 +1,2 @@
 # SWvers-ofinal
-versão final, amém
+versão final
